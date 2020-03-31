@@ -5,7 +5,6 @@
     "@types/express": "^4.17.2",
     "@types/node": "^12.12.8",
     "nodemon": "^1.19.4",
-    "ts-node": "8.5.2",
     "typescript": "3.7.2"
   },
   "dependencies": {
@@ -21,7 +20,8 @@
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
     "type-graphql": "^0.17.6",
-    "typeorm": "^0.2.24"
+    "typeorm": "^0.2.24",
+    "ts-node": "8.5.2"
   },
   "scripts": {
     "start": "ts-node src/index.ts MODE=production",
