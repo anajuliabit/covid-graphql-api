@@ -1,18 +1,16 @@
-import "reflect-metadata";
-import { createConnection, getConnectionOptions } from "typeorm";
-import express from "express";
-import { ApolloServer } from "apollo-server-express";
-import { buildSchema } from "type-graphql";
-import { CountryResolver } from "./resolvers/CountryResolver";
-import { parseApiData } from "./worker/fetchResultsByCountry";
+import 'reflect-metadata';
+import { createConnection, getConnectionOptions } from 'typeorm';
+import express from 'express';
+import { ApolloServer } from 'apollo-server-express';
+import { buildSchema } from 'type-graphql';
+import { CountryResolver } from './resolvers/CountryResolver';
+import { parseApiData } from './worker';
 
 (async () => {
   const app = express();
 
-  const options = await getConnectionOptions(
-    process.env.NODE_ENV || "development"
-  );
-  await createConnection({ ...options, name: "default" });
+  const options = await getConnectionOptions(process.env.NODE_ENV || 'development');
+  await createConnection({ ...options, name: 'default' });
 
   const apolloServer = new ApolloServer({
     schema: await buildSchema({

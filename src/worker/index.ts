@@ -12,7 +12,6 @@ function persistResults(data: Array<CountryInput>) {
   data.forEach(async (country: CountryInput) => {
     await Country.create(country).save();
   });
-  console.log(`Updated states: ${data.length} states`);
 }
 
 async function getResults() {
@@ -54,13 +53,11 @@ function parseStateCell(cell: any) {
   let state =
     cell.children[0].data ||
     cell.children[0].children[0].data ||
-    // state name with link has another level
     cell.children[0].children[0].children[0].data ||
     cell.children[0].children[0].children[0].children[0].data ||
     '';
   state = state.trim();
   if (state.length === 0) {
-    // parse with hyperlink
     state = cell.children[0].next.children[0].data || '';
   }
   return state.trim() || '';

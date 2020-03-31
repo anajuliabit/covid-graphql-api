@@ -6,7 +6,7 @@ import { CountryInput } from '../model/Country';
 export class CountryResolver {
   @Query(() => [Country])
   countries() {
-    return Country.findOne();
+    return Country.find();
   }
 
   @Mutation(() => Country)
