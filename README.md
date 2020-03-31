@@ -1,10 +1,10 @@
-# COVID GRAPHQL API
+# Covid GraphQL API
 
 GraphQL API for current cases and more stuff about COVID-19 worldwide.
 
-This project is a Concept Proof to test graphql usage in Javascript.
-I used [TypeORM](https://typeorm.io/#/) to map the objects and [TypegraqhQL](https://github.com/MichalLytek/type-graphql) to facilitate the manipulation of the schemas.
-All communication with this API is done by [Apollo](https://www.apollographql.com/docs/apollo-server/) Server.
+- This project is a Concept Proof to test graphql usage in Javascript.
+- I used [TypeORM](https://typeorm.io/#/) to map the objects and [TypegraqhQL](https://github.com/MichalLytek/type-graphql) to facilitate the manipulation of the schemas.
+- All communication with this API is done by [Apollo](https://www.apollographql.com/docs/apollo-server/) Server.
 
 ## Installation
 

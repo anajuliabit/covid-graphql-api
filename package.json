@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@types/cheerio": "^0.22.17",
+    "@types/node-cron": "^2.0.3",
     "apollo-server-express": "^2.11.0",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
     "express": "^4.17.1",
     "graphql": "^14.6.0",
+    "node-cron": "^2.0.3",
     "pg": "^7.13.0",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
@@ -22,7 +24,8 @@
     "typeorm": "^0.2.24"
   },
   "scripts": {
-    "start": "nodemon --exec ts-node src/index.ts",
+    "start": "ts-node src/index.ts MODE=production",
+    "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc"
   }
 }

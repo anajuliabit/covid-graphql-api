@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import cron from 'node-cron';
 import { createConnection, getConnectionOptions } from 'typeorm';
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
@@ -9,7 +10,7 @@ import { parseApiData } from './worker';
 (async () => {
   const app = express();
 
-  const options = await getConnectionOptions(process.env.NODE_ENV || 'development');
+  const options = await getConnectionOptions(process.env.MODE || 'database');
   await createConnection({ ...options, name: 'default' });
 
   const apolloServer = new ApolloServer({
@@ -27,4 +28,7 @@ import { parseApiData } from './worker';
   });
 
   parseApiData();
+  if (process.env.MODE === 'production') {
+    cron.schedule('*/10 * * * *', () => parseApiData());
+  }
 })();
