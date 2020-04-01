@@ -13,7 +13,7 @@ GraphQL API for current cases about COVID-19 worldwide.
 
 ## Usage example
 
-Go to `http://localhost:3000/graphql` (optional: set the port on enviromnent variables )
+Go to `http://localhost:3000/playground` (optional: set the port on enviromnent variables )
 
 ```
 {
@@ -30,6 +30,9 @@ Go to `http://localhost:3000/graphql` (optional: set the port on enviromnent var
   }
 }
 ```
+
+## Voyager
+You can see GraphQL API as an interactive graph `http://localhost:3000/voyager` (optional: set the port on enviromnent variables )
 
 ## Todo
 
