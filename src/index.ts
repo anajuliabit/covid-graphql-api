@@ -27,6 +27,8 @@ import { parseApiData } from './worker';
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
     console.log(`server started at http://localhost:${port}/graphql`);
+    console.log(`playground started at http://localhost:${port}/playground`);
+    console.log(`voyager started at http://localhost:${port}/voyager`);
   });
 
   parseApiData();
