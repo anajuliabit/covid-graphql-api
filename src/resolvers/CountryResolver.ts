@@ -13,4 +13,9 @@ export class CountryResolver {
   async createCountryData(@Arg('options', () => CountryInput) options: CountryInput) {
     return await Country.create(options).save();
   }
+
+  @Query(() => Country)
+  async getOne(@Arg('name') name: string) {
+    return Country.findOne({ where: { name } });
+  }
 }

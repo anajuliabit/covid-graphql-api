@@ -34,7 +34,6 @@ Go to `http://localhost:3000/graphql` (optional: set the port on enviromnent var
 ## Todo
 
 - [ ] Order by cases
-- [ ] Filter by country name
 
 ## Contributions
 
