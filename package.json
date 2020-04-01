@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "graphql": "^14.6.0",
     "node-cron": "^2.0.3",
+    "graphql-voyager": "1.0.0-rc.29",
     "pg": "^7.13.0",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
