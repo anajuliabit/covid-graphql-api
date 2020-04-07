@@ -13,16 +13,17 @@
     "apollo-server-express": "^2.11.0",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql": "^14.6.0",
-    "node-cron": "^2.0.3",
     "graphql-voyager": "1.0.0-rc.29",
+    "node-cron": "^2.0.3",
     "pg": "^7.13.0",
     "reflect-metadata": "^0.1.10",
     "sqlite3": "^4.1.0",
+    "ts-node": "8.5.2",
     "type-graphql": "^0.17.6",
-    "typeorm": "^0.2.24",
-    "ts-node": "8.5.2"
+    "typeorm": "^0.2.24"
   },
   "scripts": {
     "start": "ts-node src/index.ts MODE=production",
