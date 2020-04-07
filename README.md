@@ -36,14 +36,8 @@ You can see GraphQL API as an interactive graph `http://localhost:3000/voyager` 
 
 ## Todo
 
-- [ ] Order by cases
+- [x] Order by cases
 
-## Contributions
+## Data source
 
-Contributions are welcome!
-
-1. Fork it (https://github.com/anajuliabit/covid-graphql-api/fork)
-2. Create your feature branch (git checkout -b feature/fooBar)
-3. Commit your changes (git commit -am 'Add some fooBar')
-4. Push to the branch (git push origin feature/fooBar)
-5. Create a new Pull Request
+The used API to extract data was developed by [WorldOMeters](https://www.worldometers.info/coronavirus/#countries)

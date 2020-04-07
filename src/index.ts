@@ -17,10 +17,10 @@ import { parseApiData } from './worker';
   const apolloServer = new ApolloServer({
     schema: await buildSchema({
       resolvers: [CountryResolver],
-      validate: true
+      validate: true,
     }),
     context: ({ req, res }) => ({ req, res }),
-    playground: true
+    playground: true,
   });
 
   apolloServer.applyMiddleware({ app, cors: false });
