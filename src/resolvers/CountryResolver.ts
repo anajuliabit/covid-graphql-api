@@ -6,7 +6,11 @@ import { CountryInput } from '../model/Country';
 export class CountryResolver {
   @Query(() => [Country])
   countries() {
-    return Country.find();
+    return Country.find({
+      order: {
+        cases: 'DESC',
+      },
+    });
   }
 
   @Mutation(() => Country)

@@ -22,25 +22,22 @@ async function getResults() {
 
   const html = cheerio.load(response.data);
   const statesTable = html('table#main_table_countries_today');
-  const tableRows = statesTable
-    .children('tbody')
-    .children('tr:not(.total_row)')
-    .toArray();
+  const tableRows = statesTable.children('tbody').children('tr:not(.total_row)').toArray();
   const dataColIndexes: any = {
     cases: 1,
     todayCases: 2,
     deaths: 3,
     todayDeaths: 4,
     recovered: 5,
-    active: 6
+    active: 6,
   };
 
   const result: Array<CountryInput> = [];
-  tableRows.forEach(row => {
-    const cells = row.children.filter(cell => cell.name === 'td');
+  tableRows.forEach((row) => {
+    const cells = row.children.filter((cell) => cell.name === 'td');
     const data: any = {};
     data['name'] = parseStateCell(cells[0]);
-    Object.keys(dataColIndexes).forEach(property => {
+    Object.keys(dataColIndexes).forEach((property) => {
       data[property] = parseNumberCell(cells[dataColIndexes[property]]);
     });
     const country: CountryInput = { ...data };

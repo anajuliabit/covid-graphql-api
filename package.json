@@ -1,6 +1,6 @@
 {
   "name": "covid-graphql-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "devDependencies": {
     "@types/express": "^4.17.2",
     "@types/node": "^12.12.8",
