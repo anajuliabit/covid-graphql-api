@@ -1,6 +1,6 @@
 ## Contributions guide
 
-Contributions are welcome!
+PR's are welcome!
 
 1. Fork it (https://github.com/anajuliabit/covid-graphql-api/fork)
 2. Create your feature branch (git checkout -b feature/fooBar)
