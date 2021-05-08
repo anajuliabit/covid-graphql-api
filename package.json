@@ -23,7 +23,7 @@
     "sqlite3": "^4.1.0",
     "ts-node": "8.5.2",
     "type-graphql": "^0.17.6",
-    "typeorm": "^0.2.24"
+    "typeorm": "^0.2.25"
   },
   "scripts": {
     "start": "ts-node src/index.ts MODE=production",
